@@ -27,7 +27,6 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @ApiModel(value="AclPermission对象", description="权限")
 public class Permission implements Serializable {
-
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "编号")
