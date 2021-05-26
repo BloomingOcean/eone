@@ -3,6 +3,7 @@ package com.liyang.educenter.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.liyang.commonutils.JwtUtils;
 import com.liyang.commonutils.MD5;
+import com.liyang.commonutils.ordervo.UcenterMemberOrder;
 import com.liyang.educenter.entity.UcenterMember;
 import com.liyang.educenter.entity.vo.RegisterVo;
 import com.liyang.educenter.mapper.UcenterMemberMapper;

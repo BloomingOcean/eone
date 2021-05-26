@@ -84,7 +84,6 @@ public class WxApiController {
                 memberService.save(member);
             }
 
-
             //使用jwt根据member对象生成token字符串
             String jwtToken = JwtUtils.getJwtToken(member.getId(), member.getNickname());
             //最后：返回首页面，通过路径传递token字符串
@@ -94,7 +93,7 @@ public class WxApiController {
         }
     }
 
-    //1 生成微信扫描二维码
+    //1 生成微信扫描二维码（URL地址的方式）
     @GetMapping("login")
     public String getWxCode() {
         //固定地址，后面拼接参数

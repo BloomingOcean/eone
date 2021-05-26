@@ -56,13 +56,15 @@ public class UcenterMemberController {
         return Result.ok().data("userInfo",member);
     }
 
-    //根据用户id获取用户信息
+    // 根据用户id获取用户信息
+    // UcenterMember的“创建时间”和“修改时间”没有自动修改功能(@TableField)
+    // UcenterMemberOrder修改或添加时可以自动修改时间
     @PostMapping("getUserInfoOrder/{id}")
     public UcenterMemberOrder getUserInfoOrder(@PathVariable String id) {
         UcenterMember member = memberService.getById(id);
         //把member对象里面值复制给UcenterMemberOrder对象
         UcenterMemberOrder ucenterMemberOrder = new UcenterMemberOrder();
-        BeanUtils.copyProperties(member,ucenterMemberOrder);
+        BeanUtils.copyProperties(member, ucenterMemberOrder);
         return ucenterMemberOrder;
     }
 
